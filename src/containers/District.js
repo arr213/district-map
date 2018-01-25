@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { GoogleApiWrapper, Map, Polygon } from 'google-maps-react';
+import { GoogleApiWrapper, Map } from 'google-maps-react';
 import { GOOGLE_MAPS_API_KEY } from '../../config';
 import { senate_districts } from '../resources/senate_districts';
+import Polygon from '../components/Polygon';
 
 export class DistrictContainer extends Component {
-
 
   render() {
     const props = this.props;
@@ -22,7 +22,6 @@ export class DistrictContainer extends Component {
 
     return (
       <Polygon
-        key={'123124'}
         paths={triangleCoords}
         strokeColor="#FF0000"
         strokeOpacity={0.8}
